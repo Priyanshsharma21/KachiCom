@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { urlFor } from '../lib/client'
+import slug from 'slug'
 
 
 const FooterBanner = ({footerBanner}) => {
@@ -20,7 +21,7 @@ const FooterBanner = ({footerBanner}) => {
       <p>{smallText}</p>
       <h3>{midText}</h3>
       <p>{desc}</p>
-      <Link href={`/product/${product}`}>
+      <Link href={`/product/${slug(product)}`}>
         <button type='button'>{buttonText}</button>
       </Link>
       </div>
@@ -32,3 +33,4 @@ const FooterBanner = ({footerBanner}) => {
 }
 
 export default FooterBanner
+
